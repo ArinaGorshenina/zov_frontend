@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЗОВ</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/images/logo/зовfavicon.svg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+
+    <!-- header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html"><img src="assets/images/logo/зов2.svg" alt="logo" class="logo"></a>
+            <div class="header-right">
+                <nav class="header-nav">
+                    <ul class="header-list">
+                        <li><a class="header-link h-l-hover" href="#suzh">Сюжет</a></li>
+                        <li><a class="header-link h-l-hover" href="#lvl">Уровни</a></li>
+                        <li><a class="header-link h-l-hover" href="#adv">Достижения</a></li>
+                        <li><a class="header-link h-l-hover" href="#quest">Частые вопросы</a></li>
+                        <div class="btns-nav ">
+                            <a href="account.html"><img src="assets/images/header/user.png" alt="add"></a>
+                            <a href="index.html"><img src="assets/images/header/logout.png" alt="add"></a>
+                        </div>
+                    </ul>
+                </nav>
+
+                <div class="btns-nav1 btn-pos ">
+                    <a href="account.html" class="acc-img1"><img src="assets/images/header/user.png" alt="add"></a>
+                    <a href="index.html"><img src="assets/images/header/logout.png" alt="add"></a>
+                </div>
+            </div>
+            <button class="header-burger-btn" id="burger">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+    <script>document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("burger").addEventListener("click", function () {
+                document.querySelector("header").classList.toggle("open")
+            })
+        })</script>
+
+    <div class="account container">
+        <img src="assets/images/account/account.png" alt="acc" data-aos="zoom-in-right" data-aos-duration="800">
+        <div class="account-form" data-aos="zoom-in-right" data-aos-duration="800">
+            <form class="form">
+                <p class="form-zag">Личный кабинет</p>
+                <div class="gap-forms">
+                    <div class="label-gap">
+                        <label>
+                            Имя:
+                        </label>
+                        <input type="text" placeholder="Введите имя, чтобы изменить" class="place-acc">
+                    </div>
+
+                    <div class="label-gap">
+                        <label>
+                            Email:
+                        </label>
+                        <input type="text" placeholder="Введите email, чтобы изменить" class="place-acc">
+                    </div>
+
+                    <div class="label-gap">
+                        <label>
+                            Пароль:
+                        </label>
+                        <input type="text" placeholder="Введите пароль, чтобы изменить" class="place-acc">
+                    </div>
+                </div>
+
+
+                <a href="#" class="btn-form btn-form-acc">Сохранить</a>
+            </form>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <p class="raz">© Горшенина Арина</p>
+            <div class="contacts">
+                <div class="contact">
+                    <img src="assets/images/header/phone-call.png" alt="contact">
+                    <a href="tel:+79874172650">+7 (987) 417-26-50</a>
+                </div>
+
+                <div class="contact">
+                    <img src="assets/images/header/location-pin.png" alt="contact">
+                    <p class="contact-p">г. Казань, ул. Аграрная 21, 3 этаж</p>
+                </div>
+
+                <div class="contact">
+                    <img src="assets/images/header/mail.png" alt="contact">
+                    <a href="mailto:russian-horse@mail.ru" class="contact-p">zov-game@mail.ru</a>
+                </div>
+            </div>
+            <a href="#up"><img src="assets/images/footer/up.png" alt="up" class="up"></a>
+        </div>
+    </footer>
+</body>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+</html>

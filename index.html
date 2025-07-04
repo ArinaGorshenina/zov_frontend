@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЗОВ</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/images/logo/зовfavicon.svg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+TC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+
+
+    <!-- header -->
+    <header class="header" id="up">
+        <div class="container">
+            <a href="index.html"><img src="assets/images/logo/зов2.svg" alt="logo" class="logo"></a>
+            <div class="header-right">
+                <nav class="header-nav">
+                    <ul class="header-list">
+                        <li><a class="header-link h-l-hover" href="#suzh">Сюжет</a></li>
+                        <li><a class="header-link h-l-hover" href="#lvl">Уровни</a></li>
+                        <li><a class="header-link h-l-hover" href="#adv">Достижения</a></li>
+                        <li><a class="header-link h-l-hover" href="#quest">Частые вопросы</a></li>
+                        <div class="btns-nav1 ">
+                            <a href="#" class="btn-reg" onclick="openModalReg()">РЕГИСТРАЦИЯ</a>
+                            <a href="#" class="btn-avto" onclick="openModalAvto()">ВХОД</a>
+                        </div>
+                    </ul>
+                </nav>
+
+            </div>
+
+            <button class="header-burger-btn" id="burger">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+    <script>document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("burger").addEventListener("click", function () {
+                document.querySelector("header").classList.toggle("open")
+            })
+        })</script>
+
+    <!-- banner -->
+    <div class="banner">
+        <div class="container">
+            <div class="banner-txt" data-aos="fade-right" data-aos-duration="800">
+                <div class="banner-desc">
+                    <h2 id="quote"></h2>
+
+                    <div class="banner-arr">
+                        <!-- Левая стрелка -->
+                        <img src="assets/images/banner/Arrowl.png" alt="arrow-left" id="prev" style="cursor: pointer;">
+
+                        <!-- Правая стрелка -->
+                        <img src="assets/images/banner/Arrowr.png" alt="arrow-right" id="next" style="cursor: pointer;">
+                    </div>
+                </div>
+                <h1>ЗОВ</h1>
+            </div>
+        </div>
+        <img src="assets/images/lvl/tr1.png" alt="tr1" class="tr1">
+        <img src="assets/images/banner/TR11.png" alt="tr1" class="tr11">
+
+    </div>
+    <script>
+        const quotes = [
+            "Когда последний лес сгорит, а реки исчезнут в пыли, вы вспомните, что мы — те, кого вы прогнали.",
+            "Игра 2025 года, покорившая сердца многих и вдохновившая игроков по всей России."
+        ];
+
+        let currentIndex = 0;
+
+        const quoteElement = document.getElementById('quote');
+        const arrowLeft = document.getElementById('prev');
+        const arrowRight = document.getElementById('next');
+
+        function updateQuote() {
+            quoteElement.textContent = quotes[currentIndex];
+
+            // Показываем или скрываем стрелки
+            if (currentIndex === 0) {
+                arrowLeft.style.display = 'none';
+            } else {
+                arrowLeft.style.display = 'inline-block';
+            }
+
+            if (currentIndex === quotes.length - 1) {
+                arrowRight.style.display = 'none';
+            } else {
+                arrowRight.style.display = 'inline-block';
+            }
+        }
+
+        arrowLeft.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateQuote();
+            }
+        });
+
+        arrowRight.addEventListener('click', () => {
+            if (currentIndex < quotes.length - 1) {
+                currentIndex++;
+                updateQuote();
+            }
+        });
+
+        // Инициализация начальной фразы
+        updateQuote();
+    </script>
+
+
+    <!-- story -->
+    <div class="story" id="suzh">
+        <div class="container">
+            <div class="story-txt" data-aos="fade-down" data-aos-duration="800">
+                <h3>Сюжет</h3>
+                <img src="assets/images/banner/Line.png" alt="line" class="line">
+                <div class="story-txt-desc">
+                    <div class="story-txt-desc-box">
+                        <p class="story-desc">Когда мир рухнул, она осталась одна. Люди борются за выживание, природа
+                            начинает
+                            обращаться в пустоши, и даже ветер перестал петь свои песни. Волчица по клички Скала —
+                            последняя
+                            из
+                            стаи, выжившая среди руин былой гармонии. Но внутри неё всё ещё теплилась искра — её
+                            детёныши.
+                        </p>
+                        <p class="story-desc">Три хрупких жизни, которые теперь зависят только от неё. Семье нужно
+                            убежать.
+                            Скале предстоит пройти через ад — сквозь земли, где больше ничего не растёт, сквозь
+                            воспоминания
+                            о
+                            мире, который уже не вернуть.</p>
+                        <p class="story-desc">Игра — это её путь. Путь матери, которая не сдаётся. Каждый шаг —
+                            испытание.
+                            Каждая встреча — риск. Она будет охотиться, защищать, лгать. Иногда — проигрывать.</p>
+                        <p class="story-desc">В этом мире нет героев. Только те, кто ещё не сдался.</p>
+                    </div>
+                    <img src="assets/images/suzhet/pust.png" alt="story" class="story-img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- lvl1 -->
+    <div class="lvl lvl1" id="lvl">
+        <img src="assets/images/lvl/sh1.png" alt="sh" class="sh1">
+        <div class="container">
+            <div class="lvl-box lvl-box1" data-aos="fade-down" data-aos-duration="800">
+                <h3>Уровень 1: «Осколки Родины»</h3>
+                <img src="assets/images/banner/Line.png" alt="line" class="line">
+                <p class="lvl-desc">Волчица просыпается среди обгорелых деревьев и пустошей. Её выводок остался без
+                    самца-защитника. Нужно найти всех волчат, которые разбежались во время взрыва на старом заводе.</p>
+                <div class="sov-box">
+                    <div class="sov-desc">
+                        <p>→</p>
+                        <p>Избегайте мутировавших животных</p>
+                    </div>
+                    <div class="sov-desc">
+                        <p>→</p>
+                        <p>Пользуйтесь укрытиями</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="assets/images/lvl/sh1.png" alt="sh" class="sh2">
+    </div>
+
+    <!-- lvl2 -->
+    <div class="lvl lvl2">
+        <div class="container">
+            <div class="lvl-box lvl-box2" data-aos="fade-down" data-aos-duration="800">
+                <h3>Уровень 2: «Мёртвая река»</h3>
+                <img src="assets/images/banner/Line.png" alt="line" class="line">
+                <p class="lvl-desc">Чтобы продолжить путь, семье нужно пересечь реку, но вода ядовита, а бродов почти
+                    нет. Появляются первые признаки болезней у волчат.</p>
+                <div class="sov-box">
+                    <div class="sov-desc">
+                        <p>→</p>
+                        <p>Ищите безопасный переход</p>
+                    </div>
+                    <div class="sov-desc">
+                        <p>→</p>
+                        <p>Боритесь с галлюцинациями от химикатов</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- lvl3 -->
+    <div class="lvl lvl3">
+        <div class="container">
+            <div class="lvl-box lvl-box3" data-aos="fade-down" data-aos-duration="800">
+                <h3>Уровень 3: «Тени прошлого»</h3>
+                <img src="assets/images/banner/Line.png" alt="line" class="line">
+                <p class="lvl-desc">На пути встречается человеческое поселение. Охотники давно ушли, но остались
+                    ловушки, капканы и шум техники. Здесь можно найти источники пищи, но цена — риск.</p>
+                <div class="sov-box">
+                    <div class="sov-desc">
+                        <p>→</p>
+                        <p>Ведите себя тихо</p>
+                    </div>
+                    <div class="sov-desc">
+                        <p>→</p>
+                        <p>Избегайте ловушки</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="assets/images/lvl/sh2.png" alt="sh" class="sh1">
+    </div>
+
+    <!-- lvl4 -->
+    <div class="lvl lvl4">
+        <img src="assets/images/lvl/sh3.png" alt="sh" class="sh1">
+        <div class="container">
+            <div class="lvl-box lvl-box4" data-aos="fade-down" data-aos-duration="800">
+                <h3>Уровень 4: «Белый Мрак»</h3>
+                <img src="assets/images/banner/Line.png" alt="line" class="line">
+                <p class="lvl-desc">Холод усиливает слабость волчат. Требуется найти укрытие на ночь и сохранить тепло.
+                    Дикие условия и метели создают постоянную угрозу.</p>
+                <div class="sov-box">
+                    <div class="sov-desc">
+                        <p>→</p>
+                        <p>Постарайтесь укрыться до наступления ночи</p>
+                    </div>
+                    <div class="sov-desc">
+                        <p>→</p>
+                        <p>Сражайтесь</p>
+                    </div>
+                    <div class="sov-desc">
+                        <p>→</p>
+                        <p>Обогревайте волчат с помощью найденных ресурсов</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- lvl5 -->
+    <div class="lvl lvl5">
+        <img src="assets/images/lvl/sh4.png" alt="sh" class="sh1">
+        <div class="container">
+            <div class="lvl-box lvl-box5" data-aos="fade-down" data-aos-duration="800">
+                <h3>Уровень 5: «Стена Железа»</h3>
+                <img src="assets/images/banner/Line.png" alt="line" class="line">
+                <p class="lvl-desc">Перед волчицей стоит последнее серьёзное препятствие — искусственная преграда,
+                    созданная людьми. За ней — неизвестное.</p>
+                <div class="sov-box">
+                    <div class="sov-desc">
+                        <p>→</p>
+                        <p>Берегитесь сторожевых собак</p>
+                    </div>
+                    <div class="sov-desc">
+                        <p>→</p>
+                        <p>Обманывайте</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="assets/images/lvl/sh5.png" alt="sh" class="sh5">
+    </div>
+
+    <!-- lvl6 -->
+    <div class="lvl lvl6">
+        <div class="container">
+            <div class="lvl-box lvl-box6" data-aos="fade-down" data-aos-duration="800">
+                <h3>Уровень 6: «Безмолвная Земля»</h3>
+                <img src="assets/images/banner/Line.png" alt="line" class="line">
+                <p class="lvl-desc">После долгого пути сквозь загрязнённые леса, отравленные реки и человеческие
+                    поселения, волчица наконец приближается к цели — месту, которое должно было быть чистым и
+                    безопасным, но есть одна проблема...</p>
+            </div>
+        </div>
+        <img src="assets/images/lvl/tr2.png" alt="tr" class="tr2">
+    </div>
+
+    <div class="catalog" id="adv">
+        <div class="container">
+            <h3 data-aos="fade-right" data-aos-duration="800">проходи уровни и получай по одному стикеру</h3>
+            <img src="assets/images/banner/Line.png" alt="line" class="line" data-aos="fade-right" data-aos-duration="800">
+            <div class="cat-cards">
+                <div class="cat-card cc1"  data-aos="fade-down" data-aos-duration="800">
+                    <div class="cat-card-img">
+                        <img src="assets/images/catalog/s1.png" alt="catalog">
+                        <img src="assets/images/catalog/el1.png" alt="ellipse" class="el">
+                    </div>
+                    <h4>это конец?</h4>
+                    <img src="assets/images/catalog/linec.png" alt="line">
+                    <p class="card-desc">
+                        Даже огонь не сломит твой дух
+                    </p>
+                    <div class="card-btns">
+                        <div class="btn-load"> <a href="assets/images/catalog/s1.png" download class="load">Скачать</a>
+                            <a class="load-arr" href="assets/images/catalog/s1.png" download>→</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cat-card cc2" data-aos="fade-down" data-aos-duration="800">
+                    <div class="cat-card-img">
+                        <img src="assets/images/catalog/s2.png" alt="catalog">
+                        <img src="assets/images/catalog/el2.png" alt="ellipse" class="el">
+                    </div>
+                    <h4>грязь</h4>
+                    <img src="assets/images/catalog/linec.png" alt="line">
+                    <p class="card-desc">
+                        Даже в самом отвратительном мусоре ты разглядела шанс выжить
+                    </p>
+                    <div class="card-btns">
+                        <div class="btn-load"> <a href="assets/images/catalog/s1.png" download class="load">Скачать</a>
+                            <a class="load-arr" href="assets/images/catalog/s1.png" download>→</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="cat-card cc3" data-aos="fade-down" data-aos-duration="800">
+                    <div class="cat-card-img">
+                        <img src="assets/images/catalog/s3.png" alt="catalog">
+                        <img src="assets/images/catalog/el3.png" alt="ellipse" class="el">
+                    </div>
+                    <h4>чТО ЭТО?</h4>
+                    <img src="assets/images/catalog/linec.png" alt="line">
+                    <p class="card-desc">
+                        Один неверный шаг мог бы всё изменить
+                    </p>
+                    <div class="card-btns">
+                        <div class="btn-load"> <a href="assets/images/catalog/s1.png" download class="load">Скачать</a>
+                            <a class="load-arr" href="assets/images/catalog/s1.png" download>→</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cat-card cc4" data-aos="fade-down" data-aos-duration="800">
+                    <div class="cat-card-img">
+                        <img src="assets/images/catalog/s4.png" alt="catalog">
+                        <img src="assets/images/catalog/el4.png" alt="ellipse" class="el">
+                    </div>
+                    <h4>УКРЫТИЕ</h4>
+                    <img src="assets/images/catalog/linec.png" alt="line">
+                    <p class="card-desc">
+                        Эта высота стала вашим триумфом
+                    </p>
+                    <div class="card-btns">
+                        <div class="btn-load"> <a href="assets/images/catalog/s1.png" download class="load">Скачать</a>
+                            <a class="load-arr" href="assets/images/catalog/s1.png" download>→</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="cat-card cc5" data-aos="fade-down" data-aos-duration="800">
+                    <div class="cat-card-img">
+                        <img src="assets/images/catalog/s5.png" alt="catalog">
+                        <img src="assets/images/catalog/el5.png" alt="ellipse" class="el">
+                    </div>
+                    <h4>ГАВ - ГАВ!</h4>
+                    <img src="assets/images/catalog/linec.png" alt="line">
+                    <p class="card-desc">
+                        Быть матерью в этом мире — значит быть воином каждый день
+                    </p>
+                    <div class="card-btns">
+                        <div class="btn-load"> <a href="assets/images/catalog/s1.png" download class="load">Скачать</a>
+                            <a class="load-arr" href="assets/images/catalog/s1.png" download>→</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="cat-card cc6" data-aos="fade-down" data-aos-duration="800">
+                    <div class="cat-card-img">
+                        <img src="assets/images/catalog/s6.png" alt="catalog">
+                        <img src="assets/images/catalog/el6.png" alt="ellipse" class="el">
+                    </div>
+                    <h4>КОНЕЦ</h4>
+                    <img src="assets/images/catalog/linec.png" alt="line">
+                    <p class="card-desc">
+                        Последняя надежда
+                    </p>
+                    <div class="card-btns">
+                        <div class="btn-load"> <a href="assets/images/catalog/s1.png" download class="load">Скачать</a>
+                            <a class="load-arr" href="assets/images/catalog/s1.png" download>→</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="catalog-desc cc7" data-aos="zoom-in-right" data-aos-duration="800">
+                    <img src="assets/images/catalog/lines.png" alt="line">
+                    <h2>НАЧАЛО КОНЦА, ИЛИ КОНЕЦ НАЧАЛА?</h2>
+                </div>
+            </div>
+        </div>
+        <img src="assets/images/quest/mount.png" alt="mount" class="mount" data-aos="zoom-in-right" data-aos-duration="800">
+    </div>
+
+    <!-- quest -->
+    <div class="quest" id="quest">
+        <div class="container">
+            <h3 data-aos="fade-right" data-aos-duration="800">Частые вопросы</h3>
+            <img src="assets/images/banner/Line.png" alt="line" class="line quest-line">
+
+            <div class="accordion">
+                <div class="accordion-item" data-aos="fade-down" data-aos-duration="800">
+                    <div class="accordion-header">
+                        <div class="acc-l">
+                            <p class="num">1</p>
+                            <p class="acc-quest">Какие системные требования?</p>
+                        </div>
+                        <p class="acc-arr">↓</p>
+                    </div>
+                    <div class="accordion-content">
+                        <p class="acc-desc">
+                            В минимальных системных требованиях указана та комплектация ПК, на которой игру можно будет
+                            запустить без проблем при минимальных настройках графикиВ минимальных системных требованиях
+                            указана та комплектация ПК, на которой игру можно будет запустить без проблем при
+                            минимальных настройках графики
+                        <div class="acc-desc-box">
+                            <div class="acc-desc-i">
+                                <p>→</p>
+                                <p>ОС: Windows 10 64bit</p>
+                            </div>
+                            <div class="acc-desc-i">
+                                <p>→</p>
+                                <p> Процессор: Intel Core i5 / AMD FX-6300</p>
+                            </div>
+                            <div class="acc-desc-i">
+                                <p>→</p>
+                                <p> Оперативная память: 8 GB</p>
+                            </div>
+                            <div class="acc-desc-i">
+                                <p>→</p>
+                                <p> Свободное место: 12 GB</p>
+                            </div>
+                            <div class="acc-desc-i">
+                                <p>→</p>
+                                <p> Видеокарта: GTX 760 / Radeon R9 270X (2 GB)</p>
+                            </div>
+                            <div class="acc-desc-i">
+                                <p>→</p>
+                                <p> Звуковая карта: Совместимая с DirectX</p>
+                            </div>
+                            <div class="acc-desc-i">
+                                <p>→</p>
+                                <p> DirectX: 11</p>
+                            </div>
+                            <div class="acc-desc-i">
+                                <p>→</p>
+                                <p>Дополнительно: Клавиатура, мышь</p>
+                            </div>
+                        </div>
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-item" data-aos="fade-down" data-aos-duration="800">
+                    <div class="accordion-header">
+                        <div class="acc-l">
+                            <p class="num">2</p>
+                            <p class="acc-quest">Можно ли играть на телефоне и планшете?</p>
+                        </div>
+                        <p class="acc-arr">↓</p>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Игра подходит только для ноутбуков и компьютерных устройств</p>
+                    </div>
+                </div>
+                <div class="accordion-item" data-aos="fade-down" data-aos-duration="800">
+                    <div class="accordion-header">
+                        <div class="acc-l">
+                            <p class="num">3</p>
+                            <p class="acc-quest">При запуске игры возникает черный экран</p>
+                        </div>
+                        <p class="acc-arr">↓</p>
+                    </div>
+                    <div class="accordion-content">
+                        <p class="acc-desc">
+                            Способы решения
+                        <div class="acc-desc-box">
+                            <div class="acc-desc-i">
+                                <p>→</p>
+                                <p>Обновите драйверы видеокарты. Устаревшие или повреждённые драйверы видеокарты не
+                                    поддерживают определённые функции </p>
+                            </div>
+                            <div class="acc-desc-i">
+                                <p>→</p>
+                                <p> Повреждённые файлы игры. Переустановите игру</p>
+                            </div>
+                            <div class="acc-desc-i">
+                                <p>→</p>
+                                <p>Закройте сторонние приложения. Перед запуском игры следует закрывать все фоновые
+                                    приложения, особенно те, что используют GPU или RAM.</p>
+                            </div>
+                        </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                let content = header.nextElementSibling;
+                let arrow = header.querySelector('.acc-arr');
+
+                // Переключаем видимость содержимого
+                content.classList.toggle('active');
+
+                // Меняем стрелку в зависимости от состояния
+                if (content.classList.contains('active')) {
+                    arrow.textContent = '↑'; // Стрелка вверх, когда открыто
+                    content.style.marginBottom = '30px';
+                } else {
+                    arrow.textContent = '↓'; // Стрелка вниз, когда закрыто
+                }
+            });
+        });
+    </script>
+
+    <footer>
+        <div class="container">
+            <p class="raz">© Горшенина Арина</p>
+            <div class="contacts">
+                <div class="contact">
+                    <img src="assets/images/header/phone-call.png" alt="contact">
+                    <a href="tel:+79874172650">+7 (987) 417-26-50</a>
+                </div>
+
+                <div class="contact">
+                    <img src="assets/images/header/location-pin.png" alt="contact">
+                    <p class="contact-p">г. Казань, ул. Аграрная 21, 3 этаж</p>
+                </div>
+
+                <div class="contact">
+                    <img src="assets/images/header/mail.png" alt="contact">
+                    <a href="mailto:russian-horse@mail.ru" class="contact-p">zov-game@mail.ru</a>
+                </div>
+            </div>
+            <a href="#up"><img src="assets/images/footer/up.png" alt="up" class="up"></a>
+        </div>
+    </footer>
+ 
+        <div class="modal-containerReg hidden">
+            <div class="modalReg">
+                <img src="assets\images\avtoreg\close.png" alt="close" class="modal-closeReg" onclick="closeModalReg()">
+                <div class="modal-contentReg">
+                    <form class="reg-form1" name="login">
+
+                        <p class="avtoreg-zag">РЕГИСТРАЦИЯ</p>
+                        <div class="reg-form-box1">
+                            <div class="label-gap1">
+                                <div class="label-error">
+                                    <label>Имя:</label>
+                                </div>
+                                <input type="text" placeholder="Введите имя" name="email" maxlength="50"
+                                    class="place-reg">
+                            </div>
+                            <div class="label-gap1">
+                                <div class="label-error">
+                                    <label>Email:</label>
+                                </div>
+                                <input type="text" placeholder="Введите email" name="email" maxlength="50"
+                                    class="place-reg">
+                            </div>
+
+                            <div class="label-gap1">
+                                <div class="label-error">
+                                    <label>Пароль:</label>
+                                </div>
+                                <input type="password" placeholder="Введите пароль" name="password" maxlength="50"
+                                    class="place-reg">
+                            </div>
+                            <div class="label-gap1">
+                                <div class="label-error">
+                                    <label>Повторите пароль:</label>
+                                </div>
+                                <input type="password" placeholder="Введите пароль" name="password" maxlength="50"
+                                    class="place-reg">
+                            </div>
+                            <div class="avtoreg-btns">
+                                <p class="modal-avto">Есть аккаунт? <a href="#" onclick="openModalAvto()">Войти</a></p>
+                                <a href="#" class="btn-form btn-form-acc btn-form-reg">Зарегистрироваться</a>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+  
+
+  <script>
+        let modal1 = document.querySelector('.modal-containerReg');
+        modal1.classList.add('hidden')
+        document.body.append(modal1);
+        function openModalReg() {
+            modal1.classList.remove('hidden');
+            document.querySelector('.modal-container').classList.add('hidden');
+        }
+
+        function closeModalReg() {
+            document.querySelector('.modal-containerReg').classList.add('hidden');
+        }
+           
+    </script>
+   
+        <div class="modal-container hidden">
+            <div class="modal">
+                <img src="assets\images\avtoreg\close.png" alt="close" class="modal-close" onclick="closeModalAvto()">
+                <div class="modal-content">
+                    <form class="reg-form1" name="login">
+
+                        <p class="avtoreg-zag">АВТОРИЗАЦИЯ</p>
+                        <div class="reg-form-box1">
+
+                            <div class="label-gap1">
+                                <div class="label-error">
+                                    <label>Email:</label>
+                                </div>
+                                <input type="text" placeholder="Введите email" name="email" maxlength="50"
+                                    class="place-avto">
+                            </div>
+
+                            <div class="label-gap1">
+                                <div class="label-error">
+                                    <label>Пароль:</label>
+                                </div>
+                                <input type="password" placeholder="Введите пароль" name="password" maxlength="50"
+                                    class="place-avto">
+                            </div>
+
+                            <div class="avtoreg-btns">
+                                <p class="modal-avto">Нет аккаунта? <a href="#" onclick="openModalReg()">Зарегистируйтесь</a></p>
+                                <a href="#" class="btn-form btn-form-acc btn-form-avto">Войти</a>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+ 
+
+    <script>
+        let modal = document.querySelector('.modal-container');
+        modal.classList.add('hidden')
+        document.body.append(modal);
+        function openModalAvto() {
+            modal.classList.remove('hidden');
+            document.querySelector('.modal-containerReg').classList.add('hidden');
+        }
+
+        function closeModalAvto() {
+            document.querySelector('.modal-container').classList.add('hidden');
+        }
+           
+    </script>
+</body>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script> 
+
+</html>
